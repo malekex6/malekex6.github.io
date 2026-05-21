@@ -44,17 +44,18 @@ a.aboutme-b:hover {
   color: rgba(64, 139, 64, 0.6);
   text-decoration: none;
 }
+
 /* Zoom effect on the specified part of the About Me section */
 .col-md-6:hover {
-  transform: scale(1.02); /* Adjust the scale factor as needed */
-  background-color: rgba(197, 196, 196, 0.2) ;
-  transition: background-color 0.7s ease 0.15s, transform 0.7s ease-in-out; /* Delay background-color transition and add transform transition */
-
+  transform: scale(1.02);
+  background-color: rgba(197, 196, 196, 0.2);
+  transition: background-color 0.7s ease 0.15s, transform 0.7s ease-in-out;
 }
+
 .certification-tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px  rgba(197, 196, 196, 0.2) ;;
+  border-bottom: 1px rgba(197, 196, 196, 0.2);
 }
 
 .certification-tooltip .tooltiptext {
@@ -67,7 +68,7 @@ a.aboutme-b:hover {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.7s;
-  bottom: 125%; /* Position the tooltip above the link */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -92,8 +93,8 @@ a.aboutme-b:hover {
   position: absolute;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.7s; /* Matching transition timing */
-  bottom: 125%; /* Position the tooltip above the link */
+  transition: opacity 0.7s;
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -103,16 +104,39 @@ a.aboutme-b:hover {
   opacity: 1;
 }
 
-
-
 .col-md-3.text-center:hover {
-  transform: translateY(-15px) scale(1.09); /* Move the icon up by 10px */
-  transition: transform 0.7s; /* Smooth transition */
-  
+  transform: translateY(-15px) scale(1.09);
+  transition: transform 0.7s;
 }
 
+.service-card {
+  padding: 25px 20px;
+  border-radius: 18px;
+  min-height: 250px;
+  transition: all 0.3s ease;
+}
 
+.service-card:hover {
+  transform: translateY(-6px);
+  background-color: #f8f9fa;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
+.service-card img {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.08);
+}
+
+.service-tools {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #6c757d;
+  font-weight: 600;
+  line-height: 1.6;
+}
 
 .nav-link {
   font-weight: 700;
