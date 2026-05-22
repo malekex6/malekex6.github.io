@@ -405,8 +405,8 @@ footer a:not(.nav-link) {
   transform: translateX(0);
   }
   100% {
-  -webkit-transform: translateX(calc(-250px * 8));
-  transform: translateX(calc(-250px * 8));
+  -webkit-transform: translateX(calc(-250px * 11));
+  transform: translateX(calc(-250px * 11));
   }
   }
   @keyframes scroll {
@@ -415,8 +415,8 @@ footer a:not(.nav-link) {
   transform: translateX(0);
   }
   100% {
-  -webkit-transform: translateX(calc(-250px * 8));
-  transform: translateX(calc(-250px * 8));
+  -webkit-transform: translateX(calc(-250px * 11));
+  transform: translateX(calc(-250px * 11));
   }
   }
   .slider {
@@ -452,7 +452,7 @@ footer a:not(.nav-link) {
   -webkit-animation: scroll 18s linear infinite;
   animation: scroll 18s linear infinite;
   display: flex;
-  width: calc(250px * 16);
+  width: calc(250px * 22);
   }
   .slider .slide {
   display: flex;
