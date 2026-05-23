@@ -38,7 +38,7 @@
 
   <header class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-      <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">Malek BEN YOUSSEF</a>
+      <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">Personal Portfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
             class="navbar-toggler-icon"></span></button>
@@ -50,7 +50,7 @@
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li> -->
             <li class="nav-item"><a class="nav-link" href="#timeline">Experience</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -285,31 +285,31 @@
           </div>
           <div class="row myrow py-3 justify-content-center" style="max-width:1200px">
             <div class="col-lg-4 col-md-6 mb-4 text-center service-card" data-aos="fade-up" data-aos-delay="100">
-              <img class="mb-3" src="images/services/ml.png" width="90" height="90" alt="ML Modeling" />
+              <img class="service-icon mb-3" src="images/services/ml.png" width="90" height="90" alt="ML Modeling" />
               <div class="h5 fw-bold">ML Model Development</div>
               <p class="service-tools">TensorFlow • Scikit-Learn • Vertex AI</p>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4 text-center service-card" data-aos="fade-up" data-aos-delay="200">
-              <img class="mb-3" src="images/services/nlp.png" width="90" height="90" alt="NLP" />
+              <img class="service-icon mb-3" src="images/services/nlp.png" width="90" height="90" alt="NLP" />
               <div class="h5 fw-bold">Natural Language Processing</div>
               <p class="service-tools">spaCy • NLTK • Hugging Face</p>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4 text-center service-card" data-aos="fade-up" data-aos-delay="300">
-              <img class="mb-3" src="images/services/genai.png" width="90" height="90" alt="Agents" />
+              <img class="service-icon mb-3" src="images/services/genai.png" width="90" height="90" alt="Agents" />
               <div class="h5 fw-bold">Agents Orchestration</div>
               <p class="service-tools">LangChain • LlamaIndex • Google ADK</p>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4 text-center service-card" data-aos="fade-up" data-aos-delay="400">
-              <img class="mb-3" src="images/services/data_vizualization.png" width="90" height="90" alt="Data Visualization" />
+              <img class="service-icon mb-3" src="images/services/data_vizualization.png" width="90" height="90" alt="Data Visualization" />
               <div class="h5 fw-bold">Data Visualization & Reporting</div>
               <p class="service-tools">Looker Studio • BigQuery • Streamlit</p>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4 text-center service-card" data-aos="fade-up" data-aos-delay="500">
-              <img class="mb-3" src="images/services/cloud.png" width="90" height="90" alt="Cloud AI" />
+              <img class="service-icon mb-3" src="images/services/cloud.png" width="90" height="90" alt="Cloud AI" />
               <div class="h5 fw-bold">Cloud-Based AI Solutions</div>
               <p class="service-tools">GCP • Docker • Cloud Run</p>
             </div>
@@ -674,7 +674,7 @@
             <i class="fab fa-github fa-s"></i>
           </a>
         </div>
-        <p class="project-type">Personal Project</p>
+        <p class="project-type"></p>
         <ul>
           <li>Developed an NL2SQL system that converts natural language into SQL queries.</li>
           <li>Deployment: Deployed on Google Cloud Run with a CI/CD pipeline via Cloud Build, speeding up processing by 55%.</li>
@@ -728,6 +728,54 @@
     
       
     
+    <div class="section px-3 px-lg-4 pt-5 pb-5" id="contact" data-aos="fade-up">
+      <div class="container-narrow">
+        <div class="contact-shell">
+          <div class="contact-copy">
+            <div class="contact-eyebrow">
+              <i class="bi bi-cup-hot-fill"></i>
+              <span>Coffee break, maybe?</span>
+            </div>
+            <h2 class="marker">LET'S TALK</h2>
+            <p class="contact-lead">
+              If your idea has a pulse, a deadline, or a slightly suspicious spreadsheet, drop it here.
+              I like AI and data projects that are useful, weird, or both.
+            </p>
+            <ul class="contact-points">
+              <li>No pitch deck required.</li>
+              <li>Tea is accepted if coffee is not your thing.</li>
+              <li>Short idea? Long idea? I can read both.</li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/malekbenyoussef00@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Coffee chat from the portfolio site">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="mb-3">
+                <label for="contact-name" class="form-label">Name</label>
+                <input type="text" class="form-control contact-input" id="contact-name" name="name" placeholder="Your name" autocomplete="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">Email</label>
+                <input type="email" class="form-control contact-input" id="contact-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-business" class="form-label">Business description</label>
+                <textarea class="form-control contact-input contact-textarea" id="contact-business" name="business" rows="5" placeholder="Tell me what you are building, what is broken, or what you wish existed." required></textarea>
+              </div>
+              <p class="contact-note">No suits, no jargon contest. Just the idea, the context, and the coffee order.</p>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn contact-submit">Send your request</button>
+              </div>
+              <div id="contact-status" class="contact-status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <footer class="pt-4 pb-4 text-center bg-light">
         <div class="container">
           <div class="my-3">
