@@ -116,43 +116,41 @@
     const contactBusiness = document.getElementById('contact-business');
     const contactEmail = document.getElementById('contact-email');
     const contactName = document.getElementById('contact-name');
-    const contactSubmit = contactForm.querySelector('.contact-submit');
-    const submitLabel = contactSubmit ? contactSubmit.textContent : '';
+    const fallbackEmail = 'malekbenyoussef00@gmail.com';
 
-    const setStatus = (message) => {
+    const setStatus = (message, state = 'info') => {
       if (contactStatus) {
+        contactStatus.classList.remove('contact-status--success', 'contact-status--error', 'contact-status--info');
+        contactStatus.classList.add(`contact-status--${state}`);
+
+        if (state === 'error') {
+          contactStatus.innerHTML = `${message} <a href="mailto:${fallbackEmail}">Use email instead</a>.`;
+          return;
+        }
+
         contactStatus.textContent = message;
       }
     };
 
-    const setLoadingState = (isLoading) => {
-      if (!contactSubmit) {
-        return;
+    const validateInputs = () => {
+      const nameValue = contactName ? contactName.value.trim() : '';
+      const emailValue = contactEmail ? contactEmail.value.trim() : '';
+      const businessValue = contactBusiness ? contactBusiness.value.trim() : '';
+
+      if (!nameValue || !emailValue || !businessValue) {
+        return { valid: false, message: 'Fill in all the fields before sending the message.' };
       }
 
-      contactSubmit.disabled = isLoading;
-      contactSubmit.classList.toggle('is-loading', isLoading);
-      contactSubmit.textContent = isLoading ? 'Sending...' : submitLabel;
+      if (contactEmail && !contactEmail.checkValidity()) {
+        return { valid: false, message: 'Please use a valid email address.' };
+      }
+
+      if (businessValue.length < 10) {
+        return { valid: false, message: 'The business description needs at least 10 characters.' };
+      }
+
+      return { valid: true };
     };
-
-    const validateBusiness = () => {
-      if (!contactBusiness) {
-        return true;
-      }
-
-      const value = contactBusiness.value.trim();
-      if (value.length < 10) {
-        contactBusiness.setCustomValidity('Please add at least 10 characters.');
-        return false;
-      }
-
-      contactBusiness.setCustomValidity('');
-      return true;
-    };
-
-    if (contactBusiness) {
-      contactBusiness.addEventListener('input', validateBusiness);
-    }
 
     if (contactEmail) {
       contactEmail.addEventListener('input', () => {
@@ -160,60 +158,37 @@
       });
     }
 
-    contactForm.addEventListener('submit', (event) => {
-      const businessIsValid = validateBusiness();
+    contactForm.addEventListener('submit', async (event) => {
+      const validation = validateInputs();
 
-      if (!contactForm.checkValidity() || !businessIsValid) {
+      if (!validation.valid) {
         event.preventDefault();
+        setStatus(validation.message, 'error');
         contactForm.reportValidity();
-
-        if (!contactName.value.trim() || !contactEmail.value.trim() || !contactBusiness.value.trim()) {
-          setStatus('Fill in all the fields before sending it my way.');
-        } else if (!contactEmail.checkValidity()) {
-          setStatus('Please use a valid email address.');
-        } else if (!businessIsValid) {
-          setStatus('The business description needs at least 10 characters.');
-        }
-
         return;
       }
 
       event.preventDefault();
-      setStatus('Submitting your message...');
-      setLoadingState(true);
+      setStatus('Sending your message...', 'info');
 
-      const formData = new FormData(contactForm);
-
-      fetch(contactForm.action, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json'
-        },
-        body: formData
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Submission failed.');
-          }
-
-          return response.json().catch(() => ({}));
-        })
-        .then(() => {
-          contactForm.reset();
-          if (contactBusiness) {
-            contactBusiness.setCustomValidity('');
-          }
-          if (contactEmail) {
-            contactEmail.setCustomValidity('');
-          }
-          setStatus('Message sent. I’ll get back once the coffee is brewed.');
-        })
-        .catch(() => {
-          setStatus('Something blocked the send. Please try again in a moment.');
-        })
-        .finally(() => {
-          setLoadingState(false);
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json'
+          },
+          body: new FormData(contactForm)
         });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed.');
+        }
+
+        contactForm.reset();
+        setStatus('Message sent. I will get back to you as soon as possible.', 'success');
+      } catch (error) {
+        setStatus('I could not send the message right now.', 'error');
+      }
     });
   }
 

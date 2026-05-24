@@ -780,12 +780,43 @@ footer a:not(.nav-link) {
   color: #486e83;
 }
 
+.contact-status--success {
+  color: #1f7a4d;
+  animation: contactStatusPop 0.35s ease-out;
+}
+
+.contact-status--error {
+  color: #b42318;
+  animation: contactStatusPop 0.35s ease-out;
+}
+
+.contact-status--error a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.contact-status--info {
+  color: #486e83;
+}
+
 @keyframes contactWaterFill {
   0% {
     background-position: 0 100%;
   }
   100% {
     background-position: 0 0%;
+  }
+}
+
+@keyframes contactStatusPop {
+  0% {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
