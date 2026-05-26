@@ -68,7 +68,7 @@
     .about-education-list strong{color:#0f172a}
     .about-education-list a{color:#0b55c6;font-weight:700;display:inline-block;transition:transform .12s,color .12s}
     .about-education-list a:hover{color:#0847a4;transform:translateY(-1px)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:20px}
     .hero-action-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid transparent;transition:transform .12s,box-shadow .12s,background-color .12s,border-color .12s,color .12s}
     .hero-action-btn:hover{transform:translateY(-2px)}
     .hero-action-btn-primary{background:linear-gradient(135deg,#0b55c6 0%,#3b7ef6 100%);color:#fff;box-shadow:0 8px 24px rgba(11,85,198,.16)}
@@ -84,11 +84,11 @@
     .resume-switcher--home.is-open .resume-switcher-menu,
     .resume-switcher--home:focus-within .resume-switcher-menu{transform:translateY(-50%) translateX(0) scale(1)}
     .resume-switcher-option{min-width:6rem;justify-content:center;white-space:nowrap;border-radius:999px;padding:0.48rem 0.72rem;font-size:0.78rem;line-height:1.1;box-shadow:0 8px 20px rgba(20,24,40,.06)}
-    .hero-stack{margin-top:1rem;display:flex;flex-direction:column;gap:10px;max-width:26rem}
+    .hero-stack{margin-top:1.15rem;display:flex;flex-direction:column;gap:14px;max-width:26rem}
     .hero-role-badge,.hero-cloud-badge{display:inline-flex;align-items:center;gap:10px;width:fit-content;padding:10px 14px;border-radius:999px;border:1px solid rgba(26,86,219,.12);background:linear-gradient(135deg,#f5f8ff 0%,#edf4ff 100%);box-shadow:0 8px 20px rgba(20,24,40,.05);font-size:0.98rem;font-weight:700;color:#132238}
     .hero-role-badge{color:#0f172a}
     .hero-cloud-badge{font-weight:600;color:#2f3b52}
-    .hero-cloud-text{display:flex;flex-direction:column;line-height:1.1}
+    .hero-cloud-text{display:flex;flex-direction:column;line-height:1.25}
     .hero-cloud-mark{display:inline-grid;grid-template-columns:repeat(2,10px);gap:3px;align-items:center;justify-items:center;width:26px;height:18px;flex:0 0 26px}
     .hero-cloud-mark span{display:block;width:10px;height:10px;border-radius:50%}
     .hero-cloud-mark .cloud-blue{background:#4285f4}
@@ -104,9 +104,9 @@
       .about-education-grid{grid-template-columns:1fr}
     }
     @media(max-width:767.98px){
-      .hero-stack{gap:8px}
+      .hero-stack{gap:12px}
       .hero-role-badge,.hero-cloud-badge{width:100%;justify-content:flex-start;padding:10px 12px}
-      .hero-actions{flex-direction:column;align-items:stretch}
+      .hero-actions{flex-direction:column;align-items:stretch;margin-top:18px}
       .hero-action-btn{width:100%}
       .resume-switcher{width:100%}
       .resume-switcher-trigger{width:100%}
@@ -120,6 +120,7 @@
       .hero-cloud-mark{transform:scale(.95);transform-origin:left center}
     }
     @media(max-width:575.98px){
+      .hero-actions{margin-top:16px}
       .hero-role-badge,.hero-cloud-badge{font-size:0.9rem;border-radius:18px}
       .hero-cloud-text strong{font-size:0.95rem}
       .hero-cloud-subtext{font-size:0.8rem}
@@ -566,50 +567,6 @@
                   </div>
                   <div class="slide">
                     <img src="images/clients/vertexai.svg" height="80" width="80" alt="vertex ai " />
-                  <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
-                    <nav role="navigation">
-                      <ul class="nav justify-content-left">
-                      <!--
-                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip"
-                            title="Twitter"><i class="fab fa-twitter"></i><span
-                              class="menu-title sr-only">Twitter</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip"
-                            title="Facebook"><i class="fab fa-facebook"></i><span
-                              class="menu-title sr-only">Facebook</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.behance.net/templateflip"
-                            title="Behance"><i class="fab fa-behance"></i><span
-                              class="menu-title sr-only">Behance</span></a></li>
-                        -->
-                        <ul class="nav justify-content-center">
-                          <li class="nav-item">
-                              <a class="nav-link" href="https://github.com/malekex6" title="GitHub" target="_blank">
-                                  <i class="fab fa-github fa-lg"></i>
-                                  <span class="menu-title sr-only">GitHub</span>
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="https://www.linkedin.com/in/ben-youssef-malek" title="LinkedIn" target="_blank">
-                                  <i class="fab fa-linkedin fa-lg"></i>
-                                  <span class="menu-title sr-only">LinkedIn</span>
-                              </a>
-                          </li>
-
-                          <!-- <li class="nav-item">
-                            <a class="nav-link" href="https://wa.me/21654157042" title="WhatsApp" target="_blank">
-                                <i class="fab fa-whatsapp fa-lg"></i>
-                                <span class="menu-title sr-only">WhatsApp</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                          <a class="nav-link" href="https://wa.me/33744774402" title="WhatsApp" target="_blank">
-                            <i class="fab fa-whatsapp fa-lg"></i>
-                            <span class="menu-title sr-only">WhatsApp</span>
-                          </a>
-                        </li>
-                        
-                      </ul>
-                      
-                    </nav>
                   </div>
                   <div class="slide">
                     <img src="images/clients/sql_logo.svg" height="80" width="80" alt="sql" />
@@ -777,7 +734,7 @@
     </div>
 
     <!-- Alternated (Right) -->
-    <div class="experience right">
+    <div class="experience right" data-aos="fade-up" style="--reveal-delay: 0ms;">
         <div class="content">
             <div class="role-container"> 
               <div class="role">Data Engineer</div>
@@ -796,7 +753,7 @@
     </div>
 
     <!-- Alternated (Left) -->
-    <div class="experience left">
+    <div class="experience left" data-aos="fade-up" style="--reveal-delay: 90ms;">
         <div class="content">
             <div class="role">Data Science Intern</div>
             <div class="company"><a href="https://premiercloud.com" target="_blank" rel="noopener">@Premier Cloud</a></div>
@@ -813,7 +770,7 @@
     </div>
 
     <!-- Alternated (Right) -->
-    <div class="experience right">
+    <div class="experience right" data-aos="fade-up" style="--reveal-delay: 180ms;">
         <div class="content">
             <div class="role">Data Science Intern</div>
             <div class="company"><a href="https://www.silverbrain.ai" target="_blank" rel="noopener">@Silver Brain AI AG</a></div>
@@ -835,7 +792,7 @@
     </div>
 
     <!-- Project: Query Assistant -->
-    <div class="experience left">
+    <div class="experience left" data-aos="fade-up" style="--reveal-delay: 270ms;">
       <div class="content">
         <div class="role">Query Assistant
           <a href="https://github.com/malekex6/billingApp" target="_blank" class="github-icon">
@@ -853,7 +810,7 @@
     </div>
 
     <!-- Project: Sales Stream -->
-    <div class="experience right">
+    <div class="experience right" data-aos="fade-up" style="--reveal-delay: 360ms;">
       <div class="content">
         <div class="role">Sales Stream
           <a href="https://github.com/malekex6/data-streaming-insights" target="_blank" class="github-icon">
@@ -870,7 +827,7 @@
     </div>
 
     <!-- Project: Soccer Chatbot -->
-    <div class="experience left">
+    <div class="experience left" data-aos="fade-up" style="--reveal-delay: 450ms;">
       <div class="content">
         <div class="role">
           Soccer Chatbot
