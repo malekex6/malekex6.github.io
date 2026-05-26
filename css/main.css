@@ -45,13 +45,6 @@ a.aboutme-b:hover {
   text-decoration: none;
 }
 
-/* Zoom effect on the specified part of the About Me section */
-.col-md-6:hover {
-  transform: scale(1.02);
-  background-color: rgba(197, 196, 196, 0.2);
-  transition: background-color 0.7s ease 0.15s, transform 0.7s ease-in-out;
-}
-
 .certification-tooltip {
   position: relative;
   display: inline-block;
