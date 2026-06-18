@@ -47,14 +47,14 @@
     .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
     .testimonial-card{background:#f8fbff;border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(20,24,40,.04);border:1px solid rgba(15,23,42,.04);min-height:140px;display:flex;flex-direction:column;gap:8px}
     .testimonial-head{display:flex;gap:10px;align-items:center}
-    .testimonial-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:0 0 46px}
+    .testimonial-avatar{width:46px;height:46px;border-radius:50%;flex:0 0 46px;position:relative;overflow:hidden}
     .testimonial-name{font-weight:700;font-size:15px}
     .testimonial-meta{font-size:12px;color:#586069}
     .testimonial-quote{font-style:italic;color:#3b4250;margin:0;font-size:14px;line-height:1.45}
     .testimonial-link{font-size:13px;color:#1a56db;text-decoration:none}
     @media(max-width:700px){
       .testimonial-grid{grid-template-columns:1fr;gap:10px}
-      .testimonial-avatar{width:40px;height:40px}
+      .testimonial-avatar{width:40px;height:40px;flex:0 0 40px}
       .testimonial-card{padding:10px;min-height:120px}
     }
     .testimonial-card{transition:transform .12s,box-shadow .12s,border-color .12s}
@@ -409,7 +409,10 @@
                 <div class="testimonial-grid">
                   <div class="testimonial-card">
                     <div class="testimonial-head">
-                      <img class="testimonial-avatar testimonial-avatar-image" src="https://media.licdn.com/dms/image/v2/D4E03AQGiQRAVkMM2NA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707260309603?e=1781136000&v=beta&t=-di0sKde25k8EZ98RstPKtnU2irKMqq2erftnb3FOXo" alt="Mohammed Hmamouch" />
+                      <div class="testimonial-avatar testimonial-avatar--mohammed" aria-label="Mohammed Hmamouch">
+                        <img class="testimonial-avatar-image" src="https://media.licdn.com/dms/image/v2/D4E03AQGiQRAVkMM2NA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707260309603?e=1783555200&v=beta&t=lYTTCJG_DOTlbpR6SHlkzcmbITIZdF4J_QBb_gHqMrM" alt="" loading="lazy" onerror="this.style.display='none'">
+                        <span aria-hidden="true">MH</span>
+                      </div>
                       <div>
                         <div class="testimonial-name"><a href="https://www.linkedin.com/in/mohamed-hmamouch" target="_blank" rel="noopener">Mohammed Hmamouch</a></div>
                         <div class="testimonial-meta">LinkedIn recommendation</div>
@@ -421,7 +424,10 @@
 
                   <div class="testimonial-card">
                     <div class="testimonial-head">
-                      <img class="testimonial-avatar testimonial-avatar-image" src="https://media.licdn.com/dms/image/v2/D4D03AQHjBC5Ul6fNqA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718695770772?e=1781136000&v=beta&t=V01irv1nVsxDOFubOCQcE5UnHoKY05DMMAa5YxjPoxM" alt="Yahia Derbeli" />
+                      <div class="testimonial-avatar testimonial-avatar--yahia" aria-label="Yahia Derbali">
+                        <img class="testimonial-avatar-image" src="https://media.licdn.com/dms/image/v2/D4D03AQHjBC5Ul6fNqA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718695770772?e=1783555200&v=beta&t=YhOpVp0pmaLzwwldlIyqCm8qaMS7vrkY8veF-2rulY8" alt="" loading="lazy" onerror="this.style.display='none'">
+                        <span aria-hidden="true">YD</span>
+                      </div>
                       <div>
                         <div class="testimonial-name"><a href="https://www.linkedin.com/in/yahya-derbeli/" target="_blank" rel="noopener">Yahia Derbali</a></div>
                         <div class="testimonial-meta">LinkedIn recommendation</div>
