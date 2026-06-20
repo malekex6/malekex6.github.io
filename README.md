@@ -6,7 +6,7 @@
 
 ## What this is
 
-A single-page personal portfolio built to present my background, experience, and technical skills to recruiters and collaborators. The goal was to go beyond a résumé — showing how I think and what I've built, not just listing titles.
+A single-page personal portfolio built to present my background, experience, and technical skills to recruiters and collaborators. The goal was to go beyond a résumé, showing how I think and what I've built, not just listing titles.
 
 Sections: Home · About · Services · Skills · Experience (timeline) · Contact
 
